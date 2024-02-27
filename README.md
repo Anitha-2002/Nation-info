@@ -4,6 +4,7 @@ Welcome to the NationInfo web app project! This application allows you to explor
 
 ## Link: 
 https://nation-info.vercel.app/
+https://nation-info.netlify.app/
 ## Table of Contents
 
 - [Features](#features)
