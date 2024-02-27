@@ -11,7 +11,9 @@ function Navbar() {
     setTheme(newTheme);
     const AppContainer = document.querySelector(".App");
     localStorage.setItem("theme", newTheme);
-    AppContainer.className = `App ${newTheme === "light" ? "lightMode" : "darkMode"}`;
+    AppContainer.className = `App ${
+      newTheme === "light" ? "lightMode" : "darkMode"
+    }`;
   };
 
   useEffect(() => {
@@ -19,18 +21,29 @@ function Navbar() {
 
     if (getTheme === null || getTheme === "")
       localStorage.setItem("theme", "dark");
-    else
-      setTheme(getTheme);
-    
+    else setTheme(getTheme);
+
     const appContainer = document.querySelector(".App");
-    appContainer.className = `App ${getTheme === "light" ? "lightMode" : "darkMode"}`;
+    appContainer.className = `App ${
+      getTheme === "light" ? "lightMode" : "darkMode"
+    }`;
   }, []);
 
   return (
     <nav className="navbar-section" data-aos="fade-down">
-      <h1 className="navbar-title"><Link to="/" title="Country Dex">Country Dex</Link></h1>
-      <button className="navbar-btn" type="button" title="Toggle Theme" onClick={updateTheme}>
-        {theme === "dark" ? <BsFillMoonFill /> : <BsMoon />} {theme === "dark" ? "Dark" : "Light"} Mode
+      <h1 className="navbar-title">
+        <Link to="/" title="NationInfo">
+          NationInfo
+        </Link>
+      </h1>
+      <button
+        className="navbar-btn"
+        type="button"
+        title="Toggle Theme"
+        onClick={updateTheme}
+      >
+        {theme === "dark" ? <BsFillMoonFill /> : <BsMoon />}{" "}
+        {theme === "dark" ? "Dark" : "Light"} Mode
       </button>
     </nav>
   );
